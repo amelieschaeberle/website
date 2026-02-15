@@ -42,16 +42,24 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* WICHTIG: Bild oben, Text unten */
 .center a {
     display: flex;
+    flex-direction: column;   /* ordnet untereinander an */
     justify-content: center;
     align-items: center;
 }
 
-
 .center img {
     max-width: 15%;
     height: auto;
+}
+
+/* Abstand unter dem Bild */
+.portfolio-text {
+    margin-top: 10px;
+   
 }
 
 /* Unten */
