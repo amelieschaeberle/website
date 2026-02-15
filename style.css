@@ -43,24 +43,27 @@ body {
     align-items: center;
 }
 
-/* WICHTIG: Bild oben, Text unten */
+/* Link-Block */
 .center a {
     display: flex;
-    flex-direction: column;   /* ordnet untereinander an */
-    justify-content: center;
+    flex-direction: column;   /* Bild oben, Text unten */
     align-items: center;
+    text-decoration: none;
 }
 
+/* Bild */
 .center img {
-    max-width: 15%;
+    width: 100px;   /* feste Breite statt 15% */
     height: auto;
+    display: block;
 }
 
-/* Abstand unter dem Bild */
+/* Text unter dem Bild */
 .portfolio-text {
     margin-top: 10px;
-   
+    color: blue;
 }
+
 
 /* Unten */
 .bottom-left {
