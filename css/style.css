@@ -236,3 +236,27 @@ justify-self:stretch;
 }
 
 }
+/* Standard: Desktop */
+
+.desktop-meta{
+display:block;
+}
+
+.mobile-meta{
+display:none;
+}
+
+
+/* Mobile */
+
+@media (max-width:700px){
+
+.desktop-meta{
+display:none;
+}
+
+.mobile-meta{
+display:grid;
+}
+
+}
