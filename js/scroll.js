@@ -75,7 +75,7 @@ let autoScroll = 0;
 
 function autoGallery(){
 
-autoScroll += 0.3;
+autoScroll += 2;
 
 gallery.scrollLeft = autoScroll;
 
@@ -90,3 +90,22 @@ requestAnimationFrame(autoGallery);
 autoGallery();
 
 }
+
+
+/* stop scrolling when touching */
+
+gallery.addEventListener("touchstart", () => {
+autoScrolling = false;
+});
+
+
+/* continue scrolling after release */
+
+gallery.addEventListener("touchend", () => {
+
+setTimeout(() => {
+autoScrolling = true;
+}, 2000);   // Pause bevor es weiterläuft
+
+});
+
