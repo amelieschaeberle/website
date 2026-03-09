@@ -212,3 +212,18 @@ a.item{
   }
 
 }
+@media (max-width:700px){
+
+body{
+font-size:20pt;
+line-height:20pt;
+}
+
+}
+@media (max-width:700px){
+
+body{
+touch-action: pan-x;
+}
+
+}

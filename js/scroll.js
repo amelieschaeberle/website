@@ -69,3 +69,24 @@ document.addEventListener("contextmenu", (e) => {
     e.preventDefault();
   }
 });
+if (window.innerWidth <= 700) {
+
+let autoScroll = 0;
+
+function autoGallery(){
+
+autoScroll += 0.3;
+
+gallery.scrollLeft = autoScroll;
+
+if(autoScroll >= gallery.scrollWidth / 2){
+autoScroll = 0;
+}
+
+requestAnimationFrame(autoGallery);
+
+}
+
+autoGallery();
+
+}
