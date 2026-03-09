@@ -236,27 +236,22 @@ justify-self:stretch;
 }
 
 }
-/* Standard: Desktop */
+
 
 .desktop-meta{
-display:block;
+display:block !important;
 }
 
 .mobile-meta{
-display:none;
+display:none !important;
 }
-
-
-/* Mobile */
 
 @media (max-width:700px){
+  .desktop-meta{
+    display:none !important;
+  }
 
-.desktop-meta{
-display:none;
-}
-
-.mobile-meta{
-display:grid;
-}
-
+  .mobile-meta{
+    display:grid !important;
+  }
 }
