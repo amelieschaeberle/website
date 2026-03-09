@@ -1,0 +1,272 @@
+/* BASE */
+
+body{
+margin:0;
+padding:0;
+overflow:hidden;
+
+font-family:Helvetica, Arial, sans-serif;
+
+font-size:10pt;
+line-height:10pt;
+
+background:white;
+}
+
+
+/* NAVIGATION */
+
+.nav{
+
+position:fixed;
+
+top:15px;
+left:15px;
+
+display:flex;
+flex-direction:column;
+
+gap:0;
+
+z-index:50;
+
+color:white;
+mix-blend-mode:difference;
+
+}
+
+.nav a{
+
+display:block;
+
+margin:0;
+padding:0;
+
+text-decoration:none;
+
+color:inherit;
+
+line-height:10pt;
+
+}
+
+.nav a:hover{
+color:inherit;
+}
+
+
+.nav a:hover{
+color:white;
+}
+
+/* GALLERY */
+
+.gallery{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100vh;
+
+display:flex;
+
+align-items:center;
+
+overflow-x:scroll;
+overflow-y:hidden;
+
+scrollbar-width:none;
+
+}
+
+.gallery::-webkit-scrollbar{
+display:none;
+}
+
+
+/* GALLERY ITEMS */
+
+.item{
+flex-shrink:0;
+display:block;
+}
+
+.item img{
+
+display:block;
+
+height:100vh;
+width:auto;
+
+}
+
+
+/* LINKS AUF DER STARTSEITE */
+
+a.item{
+cursor:pointer;
+text-decoration:none;
+}
+
+.item{
+flex-shrink:0;
+}
+
+/* PROJECT TEXT GRID */
+
+.project-overlay{
+
+position:fixed;
+
+top:15px;
+left:15px;
+right:15px;
+
+display:grid;
+
+grid-template-columns:repeat(12,1fr);
+
+column-gap:7.5px;
+
+font-size:10pt;
+line-height:10pt;
+
+color:white;
+mix-blend-mode:difference;
+
+z-index:40;
+
+pointer-events:none;
+
+}
+
+
+/* PROJEKTÜBERSCHRIFTEN */
+
+.project-title{
+
+grid-column:7 / 8;
+
+}
+
+.project-title p{
+margin:0;
+}
+
+
+/* PROJEKTDATEN */
+
+.project-data{
+
+grid-column:8 / 13;
+
+}
+
+.project-data p{
+margin:0;
+}
+
+
+/* BESCHREIBUNG */
+
+.project-description{
+
+grid-column:2 / 12;
+
+margin-top:40pt;
+
+text-align:center;
+
+max-width:900px;
+
+justify-self:center;
+
+}
+
+.project-description p{
+margin:0;
+}
+.project-data a{
+color:inherit;
+text-decoration:none;
+}
+.project-overlay a{
+pointer-events:auto;
+}
+
+a:hover{
+color:rgb(0,0,255);
+mix-blend-mode:normal;
+}
+a:hover,
+.nav a:hover{
+color:rgb(0,0,255);
+mix-blend-mode:normal;
+}
+
+@media (max-width:700px){
+
+/* Navigation bleibt oben */
+
+.nav{
+top:15px;
+left:15px;
+}
+
+
+/* Projekttext beginnt unter Navigation */
+
+.project-overlay{
+
+top:85px;
+left:15px;
+right:15px;
+
+display:grid;
+
+grid-template-columns:auto 1fr;
+
+column-gap:10px;
+row-gap:10pt;
+
+}
+
+
+/* linke Spalte */
+
+.project-title{
+grid-column:1;
+}
+
+
+/* rechte Spalte */
+
+.project-data{
+grid-column:2;
+}
+
+
+/* Beschreibung */
+
+.project-description{
+
+grid-column:1 / 3;
+
+margin-top:40pt;
+
+text-align:center;
+
+max-width:none;
+
+justify-self:stretch;
+
+}
+
+}
+.item img{
+  -webkit-user-drag: none;
+  user-select: none;
+}
