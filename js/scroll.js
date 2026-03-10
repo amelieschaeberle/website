@@ -52,7 +52,7 @@ if (gallery) {
   function animate() {
     if (window.innerWidth <= 700) {
       if (!mobilePaused) {
-        target += 0.8;
+        target += 2;
       }
     }
 
