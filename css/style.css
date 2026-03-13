@@ -4,6 +4,7 @@ body{
   margin:0;
   padding:0;
   overflow:hidden;
+
   font-family:Helvetica, Arial, sans-serif;
   font-size:10pt;
   line-height:10pt;
@@ -217,4 +218,21 @@ max-width:none;
 justify-self:stretch;
 }
 
+}
+.project-description p{
+margin-bottom:20pt;
+}
+
+.about-overlay{
+  position:absolute;
+  top:15px;
+  left:15px;
+  right:15px;
+  padding-bottom:40pt;
+}
+
+@media (max-width:700px){
+  .about-overlay{
+    top:85px;
+  }
 }
