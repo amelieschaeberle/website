@@ -17,17 +17,24 @@ if (gallery) {
 
   let mobileAutoScroll = window.innerWidth <= 700;
   let mobilePaused = false;
+window.addEventListener("wheel", (e) => {
+  const scrollBox = e.target.closest(".about-scroll");
 
-  window.addEventListener(
-    "wheel",
-    (e) => {
-      if (window.innerWidth > 700) {
-        e.preventDefault();
-        target += e.deltaY + e.deltaX;
-      }
-    },
-    { passive: false }
-  );
+  if (scrollBox) {
+    const maxScroll = scrollBox.scrollHeight - scrollBox.clientHeight;
+    const nextScrollTop = Math.max(0, Math.min(maxScroll, scrollBox.scrollTop + e.deltaY));
+
+    scrollBox.scrollTop = nextScrollTop;
+    target += e.deltaY + e.deltaX;
+
+    e.preventDefault();
+    return;
+  }
+
+  e.preventDefault();
+  target += e.deltaY + e.deltaX;
+}, { passive: false });
+
 
   gallery.addEventListener("touchstart", () => {
     if (window.innerWidth <= 700) {

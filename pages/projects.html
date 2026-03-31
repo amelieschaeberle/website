@@ -15,30 +15,125 @@
     <a href="photography.html">Photography</a>
   </nav>
 
-<div class="gallery" id="gallery">
+ 
+
+  <div class="project-overlay">
+
+    <div class="project-title desktop-meta">
+      <p>2026</p>
+      <p>2025</p>
+      <p>2025</p>
+      <p>2024</p>
+      <p>2024</p>
+      <p>2023</p>
+    </div>
+
+    <div class="project-data desktop-meta projects-list">
+      <p>
+        <a href="bitmapgenerator.html" data-image="../images/bitmapgenerator_05.jpg">Bitmap Font Generator</a>
+      </p>
+      <p>
+        <a href="places.html" data-image="../images/places_05 .png">Places Posters</a>
+      </p>
+      <p>
+        <a href="temporary archive.html" data-image="../images/temporary_archive_01.jpg">Temporary Archive</a>
+      </p>
+      <p>
+        <a href="grotta.html" data-image="../images/grotta_01.jpg">Grotta Typeface</a>
+      </p>
+       <p>
+        <a href="same-segments.html" data-image="../images/segments_01.jpg">segments</a>
+      </p>
+      <p>
+        <a href="QWIKI.html" data-image="../images/qwiki_05.jpg">QWIKI – The portable Encyclopedia</a>
+      </p>
+     
+    
+    </div>
+
+    <div class="project-meta mobile-meta">
+      <div class="meta-row">
+        <p class="meta-label">2026</p>
+        <p class="meta-value">
+          <a href="bitmapgenerator.html" >Bitmap Font Generator</a>
+        </p>
+
+      </div>
+<div class="project-meta mobile-meta">
+      <div class="meta-row">
+        <p class="meta-label">2025</p>
+        <p class="meta-value">
+          <a href="places.html" >Places Posters</a>
+        </p>
+      </div>
+
+      </div>
+<div class="project-meta mobile-meta">
+      <div class="meta-row">
+        <p class="meta-label">2025</p>
+        <p class="meta-value">
+          <a href="temporary archive.html" >Temporary Archive</a>
+        </p>
+      </div>
+
+       </div>
+<div class="project-meta mobile-meta">
+      <div class="meta-row">
+        <p class="meta-label">2024</p>
+        <p class="meta-value">
+          <a href="grotta.html" >Grotta Typeface</a>
+        </p>
+      </div>
 
 
-<a class="item" href="../pages/QWIKI.html">
-<img src="../images/QWIKI_05.jpg" draggable="false">
-</a>
+       </div>
+<div class="project-meta mobile-meta">
+      <div class="meta-row">
+        <p class="meta-label">2024</p>
+        <p class="meta-value">
+          <a href="segments.html" >segments</a>
+        </p>
+      </div>
 
-<a class="item" href="../pages/segments.html">
-<img src="../images/segments_03.jpg" draggable="false">
-</a>
+         </div>
+<div class="project-meta mobile-meta">
+      <div class="meta-row">
+        <p class="meta-label">2023</p>
+        <p class="meta-value">
+          <a href="QWIKI.html" >Qkiki - The portable Encyclopedia</a>
+        </p>
+      </div>
 
-<a class="item" href="../pages/grotta.html">
-<img src="../images/grotta_01.jpg" draggable="false">
-</a>
+      </div>
+    </div>
 
-<a class="item" href="../pages/places.html">
-<img src="../images/places_07 .png" draggable="false">
-</a>
+  </div>
 
-</div>
-
-<script src="js/scroll.js"></script>
-
+  <div class="hover-preview" id="hoverPreview">
+    <img id="hoverPreviewImage" src="" alt="">
+  </div>
 
   <script src="../js/scroll.js"></script>
+  <script>
+    const preview = document.getElementById("hoverPreview");
+    const previewImage = document.getElementById("hoverPreviewImage");
+    const hoverLinks = document.querySelectorAll(".project-overlay a[data-image]");
+
+    hoverLinks.forEach(link => {
+      link.addEventListener("mouseenter", () => {
+        previewImage.src = link.dataset.image;
+        preview.classList.add("visible");
+      });
+
+      link.addEventListener("mouseleave", () => {
+        preview.classList.remove("visible");
+      });
+
+      link.addEventListener("mousemove", (e) => {
+        preview.style.left = e.clientX + 20 + "px";
+        preview.style.top = e.clientY + 20 + "px";
+      });
+    });
+  </script>
 </body>
 </html>
